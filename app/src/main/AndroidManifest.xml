@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.chatapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,15 +11,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatApplication">
-        <activity android:name=".UserActivity">
+        <activity android:name=".GroupCreation.CreateGroup"></activity>
+        <activity
+            android:name=".Settings.Settings"
+            android:parentActivityName=".UserActivity" />
+        <activity android:name=".detailsFirstTime.FirstLogIn" />
+        <activity
+            android:name=".AddFriend.AcceptRequest"
+            android:parentActivityName=".UserActivity" />
+        <activity
+            android:name=".AddFriend.SendRequest"
+            android:parentActivityName=".UserActivity" />
+        <activity android:name=".GroupChatDetailActivity" />
+        <activity android:name=".ChatDetailActivity" />
+        <activity android:name=".UserActivity" />
+        <activity
+            android:name=".LoginSignUp.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity">
-
         </activity>
     </application>
 

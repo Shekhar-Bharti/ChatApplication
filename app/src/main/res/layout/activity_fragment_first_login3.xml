@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detailsFirstTime.FragmentFirstLogin3"
+    android:id="@+id/frameLayoutFirstLogIn3"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Find Your Friends"
+            android:textColor="@color/blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutTop2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/bg_view"
+            app:layout_constraintTop_toTopOf="@id/linearLayoutPage3"
+            />
+
+        <RelativeLayout
+            android:rotation="180"
+            android:id="@+id/relativeLayoutBottom2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/bg_view"
+            app:layout_constraintBottom_toBottomOf="@id/linearLayoutPage3"/>
+
+        <Button
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/buttonFirstLogin3Next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayoutTop2"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:padding="20dp"
+            android:id="@+id/linearLayoutPage3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="40dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search:"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="@color/grey"
+                app:boxStrokeColor="@color/purple_200"
+                android:autofillHints="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <EditText
+                    android:id="@+id/editTextFirstlogin3Search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:inputType="textAutoComplete"
+                    android:hint="Find Your Friends"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerViewFirstLogin3"
+                />
+
+            <LinearLayout
+                android:layout_width="32dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/linearLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="2dp"
+                    android:background="@drawable/cicular_bg"
+                    android:backgroundTint="@color/blue" />
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="2dp"
+                    android:background="@drawable/cicular_bg"
+                    android:backgroundTint="@color/blue" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="2dp"
+                    android:background="@drawable/cicular_bg"
+                    android:backgroundTint="@color/blue" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

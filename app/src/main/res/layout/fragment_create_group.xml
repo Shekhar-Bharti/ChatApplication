@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_simple"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textViewFragmentCreateGroupAddParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="5dp"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFragmentCreateGroup"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:maxHeight="75dp"
+        android:minHeight="30dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/textViewFragmentCreateGroupMembers"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewFragmentCreateGroup"
+        android:text="Members"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonDropDownFragmentCreateGroup"
+        android:layout_width="50dp"
+        android:layout_height="15dp"
+        android:layout_margin="9dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recyclerViewFragmentCreateGroup"
+        tools:targetApi="lollipop" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCreateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewFragmentCreateGroupMembers"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout1">
+
+        <ImageView
+            android:id="@+id/ImageViewCameraFragmentCreateGroup"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_camera"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/circleImageViewFragmentCreateGroup"
+            app:layout_constraintBottom_toBottomOf="@id/circleImageViewFragmentCreateGroup"
+            android:elevation="3dp"
+            android:background="@drawable/background"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageViewFragmentCreateGroup"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/avatar"
+            app:civ_border_width="1dp"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Group Name"
+        android:textSize="15sp"
+        android:id="@+id/editTextFragmentCreateGroupName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        />
+
+    </LinearLayout>
+
+    <Button
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="@color/white"
+        android:text="Create"
+        android:id="@+id/buttonFragmentCreateGroup"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayoutCreateGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePicOfUserFriend"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/avatar"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="0.2dp"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="5dp">
+
+            <TextView
+                android:id="@+id/textViewUserNameFriend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UserName"
+                android:textSize="15dp"
+                android:fontFamily="serif-monospace"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewEmailFriend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="serif-monospace"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:text="Email"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewBioFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintRight_toRightOf="@+id/linearLayout"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tint="@color/grey"
+        android:id="@+id/imageViewAddFriend"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintRight_toLeftOf="@id/imageViewAddFriend"
+        android:layout_width="30dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="30dp"
+        android:tint="@color/grey"
+        android:id="@+id/imageViewDeleteFriend"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

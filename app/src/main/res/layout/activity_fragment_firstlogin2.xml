@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detailsFirstTime.FragmentFirstlogin2"
+    android:id="@+id/frameLayoutFirstLogIn2"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Lets Get Started:"
+            android:textColor="@color/blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutTop1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/bg_view"
+            app:layout_constraintTop_toTopOf="@id/linearLayoutPage2"
+            />
+
+        <RelativeLayout
+            android:rotation="180"
+            android:id="@+id/relativeLayoutBottom1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/bg_view"
+            app:layout_constraintBottom_toBottomOf="@id/linearLayoutPage2"/>
+
+        <Button
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/buttonFirstLogin2Next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayoutTop1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/buttonFirstLogin2Skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayoutTop1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <LinearLayout
+            android:padding="20dp"
+            android:id="@+id/linearLayoutPage2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="40dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout1">
+
+                <ImageView
+                    android:id="@+id/ImageViewCamera"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_camera"
+                    android:layout_gravity="center"
+                    app:layout_constraintEnd_toEndOf="@id/fragmentFirstLogin2ProfilePic"
+                    app:layout_constraintBottom_toBottomOf="@id/fragmentFirstLogin2ProfilePic"
+                    android:elevation="3dp"
+                    android:background="@drawable/background"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fragmentFirstLogin2ProfilePic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/avatar"
+                    app:civ_border_width="2dp"
+                    android:layout_gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Me:"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="@color/grey"
+                app:boxStrokeColor="@color/purple_200"
+                android:autofillHints="true"
+                android:layout_marginLeft="5dp"
+                >
+
+                <EditText
+                    android:id="@+id/editTextFirstlogin2AboutMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:minLines="3"
+                    android:maxLines="6"
+                    android:hint="Write about Yourself"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@drawable/cicular_bg"
+                    android:backgroundTint="@color/blue"/>
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/cicular_bg"
+                    android:backgroundTint="@color/blue"/>
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@drawable/cicular_bg"
+                    android:backgroundTint="@color/blue"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
